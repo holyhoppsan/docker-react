@@ -6,4 +6,4 @@ before_install:
     - docker build -t holyhoppsan/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run holyhoppsan/docker-react npm run test -- --coverage
+    - docker run -e CI=true holyhoppsan/docker-react npm run test
